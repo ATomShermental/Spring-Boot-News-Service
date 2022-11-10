@@ -1,21 +1,19 @@
 package com.atomshermental.springbootnewsservice;
 
-import com.atomshermental.springbootnewsservice.model.Comment;
+import com.atomshermental.springbootnewsservice.Interfaces.NewsRepository;
 import com.atomshermental.springbootnewsservice.model.News;
 import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
+import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.*;
 
-@AllArgsConstructor
+@RequiredArgsConstructor
 @Repository
-public class NewsRepository {
+public class NewsRepositoryImplementation implements NewsRepository {
 
-    private final Map<Long,News> storage = new HashMap<>(Map.of(1L,new News(1L,"hello","hy","Hello i am here", "Jorge",null,null),
-            2L,new News(2L,"123","12","444", "Andrew",null,null)));
-
-
-
+    private final Map<Long,News> storage;
 
 
     public News getNewsForId(Long id){
