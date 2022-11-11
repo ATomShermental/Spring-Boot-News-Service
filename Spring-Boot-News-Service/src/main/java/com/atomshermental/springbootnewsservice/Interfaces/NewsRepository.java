@@ -12,7 +12,7 @@ public interface NewsRepository {
 
 
 
-
+    Long getMax();
     News getNewsForId(Long id);
 
     List<News> getNewsList();

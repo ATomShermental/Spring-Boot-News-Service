@@ -19,10 +19,9 @@ import java.util.*;
 
 public class NewsServiceImplementation implements NewsService {
 
-    private Long max = 0L;
     private final NewsRepository newsRepository;
-    private final NewsFactory newsFactory = new NewsFactoryImplementation();
-    private final CommentFactory commentFactory = new CommentFactoryImplementation();
+    private final NewsFactory newsFactory;
+    private final CommentFactory commentFactory;
 
     public List<NewsSample> getNewsList() {
         List<News> list = newsRepository.getNewsList();
@@ -51,7 +50,7 @@ public class NewsServiceImplementation implements NewsService {
 
     public void addNews(NewsRequest newsRequest) {
         News news = newsFactory.createNews(newsRequest);
-        news.setId(++max);
+        news.setId(newsRepository.getMax()+1);
 
 
         newsRepository.save(news.getId(), news);
