@@ -10,6 +10,7 @@ import org.springframework.stereotype.Repository;
 import java.util.*;
 
 @RequiredArgsConstructor
+
 @Repository
 @Primary
 public class NewsRepositoryImplementation implements NewsRepository {

@@ -1,5 +1,8 @@
 package com.atomshermental.springbootnewsservice;
 
+import com.atomshermental.springbootnewsservice.Implementations.CommentFactoryImplementation;
+import com.atomshermental.springbootnewsservice.Implementations.NewsFactoryImplementation;
+import com.atomshermental.springbootnewsservice.Implementations.NewsRepositoryImplementation;
 import com.atomshermental.springbootnewsservice.Implementations.NewsServiceImplementation;
 import com.atomshermental.springbootnewsservice.Interfaces.NewsRepository;
 import com.atomshermental.springbootnewsservice.Interfaces.NewsService;
@@ -12,10 +15,10 @@ import java.util.*;
 
 class NewsServiceTest {
 
-    private NewsRepository newsRepository = new NewsRepositoryMock(Map.of(
+    private NewsRepository newsRepository = new NewsRepositoryImplementation(Map.of(
             2L,new News(2L,"123","12","444", "Andrew",null,null),1L,new News(1L,"hello","hy","Hello i am here", "Jorge",null,null)));
 
-    private NewsService newsService =  new NewsServiceImplementation(newsRepository);
+    private NewsService newsService =  new NewsServiceImplementation(newsRepository, new NewsFactoryImplementation(), new CommentFactoryImplementation());
 
 
     @Test

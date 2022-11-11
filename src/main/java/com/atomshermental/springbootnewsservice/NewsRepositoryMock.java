@@ -14,7 +14,7 @@ public class NewsRepositoryMock implements NewsRepository {
 
     private final Map<Long, News> storage;
 
-
+    private Long max = 0L;
     public News getNewsForId(Long id){
         return storage.get(id);
     }
@@ -25,5 +25,8 @@ public class NewsRepositoryMock implements NewsRepository {
 
     public void save(Long id, News news){
         storage.put(id,news);
+    }
+    public Long getMax(){
+        return max;
     }
 }

@@ -15,6 +15,7 @@ import org.springframework.stereotype.Service;
 import java.util.*;
 
 @RequiredArgsConstructor
+
 @Service
 
 public class NewsServiceImplementation implements NewsService {
@@ -22,6 +23,8 @@ public class NewsServiceImplementation implements NewsService {
     private final NewsRepository newsRepository;
     private final NewsFactory newsFactory;
     private final CommentFactory commentFactory;
+
+
 
     public List<NewsSample> getNewsList() {
         List<News> list = newsRepository.getNewsList();
