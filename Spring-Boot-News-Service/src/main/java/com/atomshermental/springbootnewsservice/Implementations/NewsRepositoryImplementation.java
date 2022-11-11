@@ -1,16 +1,17 @@
-package com.atomshermental.springbootnewsservice;
+package com.atomshermental.springbootnewsservice.Implementations;
 
 import com.atomshermental.springbootnewsservice.Interfaces.NewsRepository;
-import com.atomshermental.springbootnewsservice.model.News;
-import lombok.AllArgsConstructor;
+import com.atomshermental.springbootnewsservice.Objects.News;
+import lombok.Getter;
 import lombok.RequiredArgsConstructor;
+import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
-import org.springframework.web.bind.annotation.RequestBody;
 
 import java.util.*;
 
 @RequiredArgsConstructor
 @Repository
+@Primary
 public class NewsRepositoryImplementation implements NewsRepository {
 
     private final Map<Long,News> storage;
@@ -21,7 +22,7 @@ public class NewsRepositoryImplementation implements NewsRepository {
     }
 
     public List<News> getNewsList(){
-       return new ArrayList<News>(storage.values());
+       return new ArrayList<>(storage.values());
     }
 
     public void save(Long id, News news){

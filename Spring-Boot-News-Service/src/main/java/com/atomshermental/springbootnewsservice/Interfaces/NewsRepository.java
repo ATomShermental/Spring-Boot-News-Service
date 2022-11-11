@@ -1,12 +1,14 @@
 package com.atomshermental.springbootnewsservice.Interfaces;
 
-import com.atomshermental.springbootnewsservice.model.News;
+import com.atomshermental.springbootnewsservice.Objects.News;
+import lombok.Getter;
+import lombok.Setter;
 
 
 import java.util.List;
-import java.util.Map;
 
 public interface NewsRepository {
+
 
 
 

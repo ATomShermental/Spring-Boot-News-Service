@@ -1,4 +1,4 @@
-package com.atomshermental.springbootnewsservice.model;
+package com.atomshermental.springbootnewsservice.Objects;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

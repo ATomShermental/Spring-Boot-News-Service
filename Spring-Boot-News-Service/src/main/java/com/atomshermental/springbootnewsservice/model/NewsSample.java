@@ -5,7 +5,7 @@ import lombok.Data;
 
 @Data
 @AllArgsConstructor
-public class NewsShablon {
+public class NewsSample {
     Long id;
     String header;
 

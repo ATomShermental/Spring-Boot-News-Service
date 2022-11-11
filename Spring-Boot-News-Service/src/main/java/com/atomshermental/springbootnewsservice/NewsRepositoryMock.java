@@ -1,11 +1,10 @@
 package com.atomshermental.springbootnewsservice;
 
 import com.atomshermental.springbootnewsservice.Interfaces.NewsRepository;
-import com.atomshermental.springbootnewsservice.model.*;
+import com.atomshermental.springbootnewsservice.Objects.News;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Repository;
 
-import java.time.Instant;
 import java.util.*;
 
 @RequiredArgsConstructor
@@ -13,7 +12,7 @@ import java.util.*;
 
 public class NewsRepositoryMock implements NewsRepository {
 
-    private final Map<Long,News> storage;
+    private final Map<Long, News> storage;
 
 
     public News getNewsForId(Long id){
@@ -21,7 +20,7 @@ public class NewsRepositoryMock implements NewsRepository {
     }
 
     public List<News> getNewsList(){
-        return new ArrayList<News>(storage.values());
+        return new ArrayList<>(storage.values());
     }
 
     public void save(Long id, News news){
