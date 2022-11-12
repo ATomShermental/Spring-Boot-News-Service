@@ -16,7 +16,7 @@ public class NewsRepositoryImplementation implements NewsRepository {
 
     public NewsRepositoryImplementation(){
         this.storage = new HashMap<>();
-        this.max = Long.valueOf(storage.size());
+        this.max = 0L;
     }
 
     public News getNewsForId(Long id){
