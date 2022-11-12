@@ -2,7 +2,6 @@ package com.atomshermental.springbootnewsservice;
 
 import com.atomshermental.springbootnewsservice.Implementations.CommentFactoryImplementation;
 import com.atomshermental.springbootnewsservice.Implementations.NewsFactoryImplementation;
-import com.atomshermental.springbootnewsservice.Implementations.NewsRepositoryImplementation;
 import com.atomshermental.springbootnewsservice.Implementations.NewsServiceImplementation;
 import com.atomshermental.springbootnewsservice.Interfaces.NewsRepository;
 import com.atomshermental.springbootnewsservice.Interfaces.NewsService;

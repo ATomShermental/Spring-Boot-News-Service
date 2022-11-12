@@ -3,7 +3,6 @@ package com.atomshermental.springbootnewsservice.Implementations;
 import com.atomshermental.springbootnewsservice.Interfaces.NewsFactory;
 import com.atomshermental.springbootnewsservice.Objects.News;
 import com.atomshermental.springbootnewsservice.model.NewsRequest;
-
 import java.time.Instant;
 import java.util.Date;
 

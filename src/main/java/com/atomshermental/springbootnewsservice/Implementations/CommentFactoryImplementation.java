@@ -3,7 +3,6 @@ package com.atomshermental.springbootnewsservice.Implementations;
 import com.atomshermental.springbootnewsservice.Interfaces.CommentFactory;
 import com.atomshermental.springbootnewsservice.Objects.Comment;
 import com.atomshermental.springbootnewsservice.model.CommentRequest;
-
 import java.sql.Date;
 import java.time.Instant;
 

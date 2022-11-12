@@ -2,9 +2,6 @@ package com.atomshermental.springbootnewsservice.Implementations;
 
 import com.atomshermental.springbootnewsservice.Interfaces.NewsRepository;
 import com.atomshermental.springbootnewsservice.Objects.News;
-import lombok.Getter;
-import lombok.RequiredArgsConstructor;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Primary;
 import org.springframework.stereotype.Repository;
 
@@ -18,7 +15,7 @@ public class NewsRepositoryImplementation implements NewsRepository {
     private Long max;
 
     public NewsRepositoryImplementation(){
-        this.storage = new HashMap<Long, News>();
+        this.storage = new HashMap<>();
         this.max = Long.valueOf(storage.size());
     }
 
